@@ -1,0 +1,117 @@
+@font-face {
+    font-family: bold;
+    src: url(bold.ttf);
+}
+
+* {
+    color: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #23272a;
+    font-family: bold;
+}
+
+.loginform {
+    position: relative;
+    margin-top: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: auto;
+    height: auto;
+    background: #000000;
+    border-radius: 20px;
+    display: flex;
+}
+
+.loginform:before,
+.loginform:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094,
+            #0000ff, #00ff00, #ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+    border-radius: 20px;
+}
+
+@keyframes steam {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.loginform:after {
+    filter: blur(50px);
+}
+
+.ltldiv {
+    flex: 1;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.ltldiv:first-child {
+    margin-right: 20px;
+}
+
+#immagine {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-family: bold;
+}
+
+.form {
+    /*margin-left: 50px;*/
+    padding-right: 100px;
+}
+
+input {
+    /*color: #2c2f33;*/
+    width: auto;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 40px;
+    /*width: 100%;*/
+    background-color: #23272a;
+    color: white;
+    padding-left: 10px;
+    font-family: bold;
+}
+
+.infi {
+    background-color: #23272a;
+    width: 100%;
+
+}
+
+.inline {
+    display:inline-block;
+    margin-right:5px;
+ }
+
+#login {
+    background-color: #35b135;
+    width: 250px;
+}
+
+#register {
+    background-color: #b42020;
+    width: 250px;
+}
