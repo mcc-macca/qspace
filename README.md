@@ -16,7 +16,7 @@ $config = [
 ];
 ```
 
-Then dump in phpMyAdmin the sql file for users table:
+Then dump in phpMyAdmin the sql file for users table (`sql/users.sql`):
 ```sql
 CREATE TABLE `users` (
   `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
