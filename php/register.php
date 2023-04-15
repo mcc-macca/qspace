@@ -15,14 +15,14 @@ if (isset($_POST['register'])) {
     $pwdLenght = mb_strlen($password);
     
     if (empty($username) || empty($password)) {
-        $msg = 'Compila tutti i campi %s';
+        $msg = 'Compile all field %s';
     } elseif (false === $isUsernameValid) {
-        $msg = 'Lo username non è valido. Sono ammessi solamente caratteri 
-                alfanumerici e l\'underscore. Lunghezza minina 3 caratteri.
-                Lunghezza massima 20 caratteri';
+        $msg = 'Username not valid. Only admin alphanumeric characters 
+                and the underscore. Min lenght 3 char.
+                Max lenght 20 char';
     } elseif ($pwdLenght < 8 || $pwdLenght > 20) {
-        $msg = 'Lunghezza minima password 8 caratteri.
-                Lunghezza massima 20 caratteri';
+        $msg = 'Password min 8 char.
+                Password max 8 char';
     } else {
         $password_hash = password_hash($password, PASSWORD_BCRYPT);
 
@@ -39,7 +39,7 @@ if (isset($_POST['register'])) {
         $user = $check->fetchAll(PDO::FETCH_ASSOC);
         
         if (count($user) > 0) {
-            $msg = 'Username già in uso %s';
+            $msg = 'Username already in use %s';
         } else {
             $query = "
                 INSERT INTO users
@@ -52,12 +52,12 @@ if (isset($_POST['register'])) {
             $check->execute();
             
             if ($check->rowCount() > 0) {
-                $msg = 'Registrazione eseguita con successo';
+                $msg = 'Register success!';
             } else {
-                $msg = 'Problemi con l\'inserimento dei dati %s';
+                $msg = 'Problem with data check %s';
             }
         }
     }
     
-    printf($msg, '<a href="../register.html">torna indietro</a>');
+    printf($msg, '<a href="../register.php">go back</a>');
 }

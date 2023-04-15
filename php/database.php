@@ -1,10 +1,10 @@
 <?php
 $config = [
-    'db_engine' => 'mysql',
-    'db_host' => '127.0.0.1',
-    'db_name' => 'test',
-    'db_user' => 'root',
-    'db_password' => '',
+    'db_engine' => 'mysql',      // DATABASE ENGINE
+    'db_host' => 'localhost',    // HOST DATABASE (usare localhost oppure IP)
+    'db_name' => '',             // NOME DATABASE. IMPORTANTE !
+    'db_user' => 'root',             // UTENTE DATABASE (ROOT/{nome})
+    'db_password' => '',         // NON E' SEMPRE OBBLIGATORIA
 ];
 
 $db_config = $config['db_engine'] . ":host=".$config['db_host'] . ";dbname=" . $config['db_name'];

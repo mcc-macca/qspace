@@ -5,6 +5,7 @@
 
 * {
     color: #ffffff;
+    transition: ease all 0.5s;
 }
 
 body {
@@ -114,4 +115,17 @@ input {
 #register {
     background-color: #b42020;
     width: 250px;
+}
+
+#login:hover {
+    box-shadow: 0px 0px 30px #35b135;
+}
+
+#register:hover {
+    box-shadow: 0px 0px 30px #b42020;
+}
+
+input[type=checkbox], label {
+    align-items: center;
+    text-align: center;
 }

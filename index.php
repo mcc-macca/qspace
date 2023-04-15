@@ -1,3 +1,10 @@
+<?php 
+require 'php/funzioni.php';
+$data = leggiFileJson("https://taiyoshitsu.altervista.org/api/mcls/mcls.json");
+$nome = $data['qspace'][0]['name'];
+$versione = $data['qspace'][0]['version'];
+$footer_mcls = "Powered by $nome - $versione";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +13,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login | qspace</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -28,19 +36,21 @@
 				<center>
 					<h1>LOGIN</h1>
 				</center>
-				<br><br>
+				<br>
 
+				<form method="post" action="php/login.php">
 				<p>Username:</p>
 				<input class="infi" type="text" placeholder="ID">
-				<br>
 				<br>
 				<p>Password:</p>
 				<input class="infi" type="password" placeholder="Password">
 				<br><br>
 				<center>
-				<input type="button" class="inline" value="Register" id="register">
+				<a href="register.php"><input type="button" class="inline" value="Register" id="register"></a>
 				<input type="submit" class="inline" value="Login" id="login">
+				<center><h4><?=$footer_mcls?></h4></center>
 				</center>
+				</form>
 			</div>
 		</div>
 	</div>
