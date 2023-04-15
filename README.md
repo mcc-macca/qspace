@@ -7,4 +7,4 @@ This project is a special version of MCLS.
 Is build for Qspace Corporation.
 
 ## TODO
-[ ] Add REMEMBER ME option (with cookie)
+[X] Add REMEMBER ME option (with cookie)
